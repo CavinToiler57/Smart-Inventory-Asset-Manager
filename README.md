@@ -4,6 +4,14 @@ A full-stack inventory management system built to help companies manage IT asset
 
 It allows an admin to add assets, add employees, assign assets to employees, return assets, track assignment history, and view a complete activity log.
 
+## 📸 Screenshots
+
+### Dashboard
+![Smart Inventory Dashboard](./docs/screenshots/dashboard.png)
+
+### Employee Management
+![Employee Management](./docs/screenshots/employees.png)
+
 ---
 
 ## ✨ Features
