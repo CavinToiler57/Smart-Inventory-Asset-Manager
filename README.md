@@ -2,7 +2,8 @@
 
 A full-stack inventory management system built to help companies manage IT assets such as laptops, monitors, keyboards, mice, phones, and other equipment.
 
-It allows an admin to add assets, add employees, assign assets to employees, return assets, track assignment history, and view a complete activity log.
+It allows an admin to add assets, add employees, assign assets to employees, return assets, track assignment history, and view a complete
+activity log..
 
 ## 📸 Screenshots
 
