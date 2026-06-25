@@ -188,6 +188,8 @@ http://localhost:5000
 Test the backend:
 
 http://localhost:5000/api/health
+
+
 🎨 Frontend Setup
 
 Open a second terminal and go to the frontend folder:
@@ -209,8 +211,11 @@ http://localhost:5173
 Open this URL in your browser:
 
 http://localhost:5173
+
+
 🔗 API Endpoints
 Assets
+
 Method	Endpoint	Description
 GET	/api/assets	Get all assets
 POST	/api/assets	Add a new asset
@@ -232,6 +237,8 @@ Activity Logs
 Method	Endpoint	Description
 GET	/api/activity	Get recent activity logs
 GET	/api/activity?limit=10	Get a limited number of activity logs
+
+
 💡 How It Helps a Company
 
 This system helps companies keep track of their equipment and avoid confusion about company assets.
@@ -261,6 +268,8 @@ backend/.env
 frontend/.env
 dist
 .DS_Store
+
+
 🧪 Basic Testing Flow
 Add a new employee
 Add a new asset with a unique asset tag
@@ -272,6 +281,8 @@ Click Return
 Confirm that the asset status becomes Available
 Check Assignment History
 Check Recent Activity
+
+
 🔮 Future Improvements
 🔐 Login and user authentication
 👑 Admin and employee roles
