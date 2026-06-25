@@ -78,6 +78,69 @@ employeesRouter.post('/', async (request, response, next) => {
 	}
 });
 
+// Update one employee
+employeesRouter.put('/:id', async (request, response, next) => {
+	try {
+		const employeeId = Number(request.params.id);
+
+		if (!Number.isInteger(employeeId) || employeeId < 1) {
+			return response.status(400).json({
+				success: false,
+				message: 'Please provide a valid employee ID.',
+			});
+		}
+
+		const {
+			name,
+			email = null,
+			department = null,
+			designation = null,
+		} = request.body;
+
+		if (!name?.trim()) {
+			return response.status(400).json({
+				success: false,
+				message: 'Employee name is required.',
+			});
+		}
+
+		const result = await pool.query(
+			`UPDATE employees
+			SET
+				name = $1,
+				email = $2,
+				department = $3,
+				designation = $4
+			WHERE id = $5
+			RETURNING *`,
+			[
+				name.trim(),
+				email?.trim().toLowerCase() || null,
+				department?.trim() || null,
+				designation?.trim() || null,
+				employeeId,
+			],
+		);
+
+		const employee = result.rows[0];
+
+		if (!employee) {
+			return response.status(404).json({
+				success: false,
+				message: 'Employee not found.',
+			});
+		}
+
+		response.json({
+			success: true,
+			message: 'Employee updated successfully.',
+			employee,
+		});
+	} catch (error) {
+		next(error);
+	}
+});
+
 /*
 	Delete one employee.
 	Related assignment records will also be deleted automatically
