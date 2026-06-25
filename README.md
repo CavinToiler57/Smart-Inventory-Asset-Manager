@@ -85,7 +85,7 @@ smart-inventory-asset-manager/
 Follow these steps to run the project locally.
 
 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/smart-inventory-asset-manager.git
+git clone https://github.com/CavinToiler57/smart-inventory-asset-manager.git
 
 Move into the project folder:
 
